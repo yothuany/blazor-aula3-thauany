@@ -1,0 +1,2 @@
+O FormProduto não adiciona o produto diretamente à lista porque sua função é apenas exibir e validar o formulário. Quando os dados são válidos, o formulário avisa a página por meio do EventCallback<Produto>. A página Produtos recebe o produto pelo método ReceberProduto e é responsável por adicioná-lo à lista.
+O componente sabe quando avisar porque o EditForm utiliza o OnValidSubmit, que executa o envio somente após a validação passar.
