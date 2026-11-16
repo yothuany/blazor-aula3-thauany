@@ -1,4 +1,2 @@
-O `FormProduto` não adiciona diretamente à lista porque sua responsabilidade é somente coletar e validar os dados.
-A página `Produtos` é responsável por manter a lista e adicionar o produto recebido.
-Quando o cadastro é válido, o formulário usa o `EventCallback<Produto>` para avisar a página.
-Assim, o componente filho permanece reutilizável e não depende de onde os produtos são armazenados.
+O FormProduto não adiciona o produto diretamente à lista porque sua função é apenas exibir e validar o formulário. Quando os dados são válidos, o formulário avisa a página por meio do EventCallback<Produto>. A página Produtos recebe o produto pelo método ReceberProduto e é responsável por adicioná-lo à lista.
+O componente sabe quando avisar porque o EditForm utiliza o OnValidSubmit, que executa o envio somente após a validação passar.
